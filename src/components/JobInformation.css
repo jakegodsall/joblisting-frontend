@@ -1,0 +1,48 @@
+.jobinformation {
+    font-size: 1rem;
+}
+
+.jobinformation__status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.jobinformation__company {
+    color: hsl(180, 29%, 50%);
+    margin-right: 1rem;
+}
+
+.jobinformation__new,
+.jobinformation__featured {
+    color: #fff;
+    border-radius: 30px;
+    padding: 0.3rem 0.6rem;
+    text-transform: uppercase;
+    margin-right: 0.3rem;
+}
+
+.jobinformation__new {
+    background-color: hsl(180, 29%, 50%);
+}
+
+.jobinformation__featured {
+    background-color: #000;
+}
+
+.jobinformation__title {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+}
+
+.jobinformation__subinfo {
+    display: flex;
+    align-items: center;
+    color: hsl(180, 8%, 52%);
+}
+
+.jobinformation__spacer {
+    font-size: 0.5rem;
+    margin-inline: 0.5rem;
+}
