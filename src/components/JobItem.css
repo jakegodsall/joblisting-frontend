@@ -1,0 +1,44 @@
+.jobitem {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.jobitem__logo {
+    width: 5rem;
+    margin-right: 1rem;
+}
+
+.jobitem__information {
+}
+
+.jobitem__status {
+    display: flex;
+}
+
+.jobitem__title {
+    font-size: 1.2rem;
+}
+
+.jobitem__subinfo {
+    display: flex;
+}
+
+.jobitem__taglist {
+    display: flex;
+}
+
+.jobitem__taglist {
+    margin-left: auto;
+}
+
+.jobitem__tagitem {
+    background-color: hsl(180, 52%, 96%);
+    color: hsl(180, 29%, 50%);
+    padding: 0.4rem;
+    margin: 0.3rem;
+    font-weight: ;
+}
