@@ -7,9 +7,19 @@ const reqSvgs = require.context('../images', true, /\.svg$/);
 const JobItem = (props) => {
     let tags = [...[props.job.role, props.job.level, ...props.job.languages, ...props.job.tools]];
 
+    const fullImagePath = props.job.logo.split('/');
+    const imagePathKey = './' + fullImagePath[fullImagePath.length - 1];
+
+    console.log(reqSvgs.keys());
+    console.log(imagePathKey);
+
+    const image = reqSvgs[imagePathKey];
+
+    console.log(image);
+
     return (
         <div className='jobitem'>
-            <img className='jobitem__logo' src={reqSvgs.keys()[1]} alt='Manage company logo' />
+            <img className='jobitem__logo' src={image} alt='Manage company logo' />
             <JobInformation
                 company={props.job.company}
                 new={props.job.new}
