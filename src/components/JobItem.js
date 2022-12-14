@@ -1,16 +1,15 @@
 import JobInformation from './JobInformation';
 import JobTagItem from './JobTagItem';
-
-import ManageLogo from '../images/manage.svg';
-
 import './JobItem.css';
 
-const JobListing = (props) => {
+const reqSvgs = require.context('../images', true, /\.svg$/);
+
+const JobItem = (props) => {
     let tags = [...[props.job.role, props.job.level, ...props.job.languages, ...props.job.tools]];
 
     return (
         <div className='jobitem'>
-            <img className='jobitem__logo' src={ManageLogo} alt='Manage company logo' />
+            <img className='jobitem__logo' src={reqSvgs.keys()[1]} alt='Manage company logo' />
             <JobInformation
                 company={props.job.company}
                 new={props.job.new}
@@ -30,4 +29,4 @@ const JobListing = (props) => {
     );
 };
 
-export default JobListing;
+export default JobItem;
