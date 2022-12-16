@@ -1,16 +1,18 @@
 import React from 'react';
 
-import JobItem from './JobItem';
+import styled from 'styled-components';
 
-import './JobList.css';
+import JobItem from './JobItem/JobItem';
+
+const JobListDiv = styled.div``;
 
 const JobList = (props) => {
     return (
-        <div className='joblist'>
+        <JobListDiv>
             {props.jobs.map((job, idx) => {
                 return <JobItem key={idx} job={job} />;
             })}
-        </div>
+        </JobListDiv>
     );
 };
 

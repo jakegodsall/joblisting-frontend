@@ -2,8 +2,6 @@ import React from 'react';
 
 import JobList from './components/JobList';
 
-import './App.css';
-
 const App = () => {
     const jobs = [
         {
