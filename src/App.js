@@ -156,7 +156,11 @@ const App = () => {
         },
     ];
 
-    return <JobList jobs={jobs} />;
+    return (
+        <div className='container'>
+            <JobList jobs={jobs} />
+        </div>
+    );
 };
 
 export default App;

@@ -1,17 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import Card from '../../UI/Card';
 
 import JobInformation from './JobInformation';
 import JobTagList from './JobTagList';
-
-const JobItemDiv = styled.div`
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    margin: 1rem 0;
-    padding: 1rem;
-    border-radius: 10px;
-`;
 
 const CompanyLogo = styled.img`
     width: 5rem;
@@ -22,7 +14,7 @@ const JobItem = (props) => {
     let tags = [...[props.job.role, props.job.level, ...props.job.languages, ...props.job.tools]];
 
     return (
-        <JobItemDiv>
+        <Card>
             <CompanyLogo src={null} alt='Manage company logo' />
             <JobInformation
                 company={props.job.company}
@@ -35,7 +27,7 @@ const JobItem = (props) => {
                 location={props.job.location}
             />
             <JobTagList tags={tags} />
-        </JobItemDiv>
+        </Card>
     );
 };
 
