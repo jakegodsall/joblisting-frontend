@@ -4,7 +4,10 @@ import styled from 'styled-components';
 
 import JobItem from './JobItem/JobItem';
 
-const JobListDiv = styled.div``;
+const JobListDiv = styled.div`
+    width: 70%;
+    margin-inline: auto;
+`;
 
 const JobList = (props) => {
     return (
