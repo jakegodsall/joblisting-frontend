@@ -10,8 +10,8 @@ const CardDiv = styled.div`
     border-radius: 10px;
 `;
 
-const Card = (props) => {
+const JobCard = (props) => {
     return <CardDiv>{props.children}</CardDiv>;
 };
 
-export default Card;
+export default JobCard;

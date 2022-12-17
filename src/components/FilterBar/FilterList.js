@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import FilterItem from './FilterItem';
 
 const FilterList = () => {
-    const DUMMYFILTERS = ['Frontend', 'CSS', 'JavaScript'];
+    const [filters, setFilters] = useState([]);
 
     return (
-        {DUMMYFILTERS.map((filterItem, idx) => {
-            return <FilterItem key={idx}>{filterItem}</FilterItem>
-        })}
+        <React.Fragment>
+            {filters.map((filter, idx) => {
+                return <FilterItem key={idx}>{filter}</FilterItem>;
+            })}
+        </React.Fragment>
     );
 };
 

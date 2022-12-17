@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Card from '../UI/Card';
+import JobCard from '../UI/JobCard';
 import FilterList from './FilterList';
 
 const ClearButton = styled.p`
@@ -10,10 +10,10 @@ const ClearButton = styled.p`
 
 const FilterBar = (props) => {
     return (
-        <Card>
+        <JobCard>
             <FilterList />
             <ClearButton>Clear</ClearButton>
-        </Card>
+        </JobCard>
     );
 };
 

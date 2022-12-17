@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Card from '../../UI/Card';
+import JobCard from '../../UI/JobCard';
 
 import JobInformation from './JobInformation';
 import JobTagList from './JobTagList';
@@ -14,7 +14,7 @@ const JobItem = (props) => {
     let tags = [...[props.job.role, props.job.level, ...props.job.languages, ...props.job.tools]];
 
     return (
-        <Card>
+        <JobCard>
             <CompanyLogo src={null} alt='Manage company logo' />
             <JobInformation
                 company={props.job.company}
@@ -27,7 +27,7 @@ const JobItem = (props) => {
                 location={props.job.location}
             />
             <JobTagList tags={tags} />
-        </Card>
+        </JobCard>
     );
 };
 
