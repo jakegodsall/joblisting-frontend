@@ -15,8 +15,16 @@ const JobList = (props) => {
 
     const onClickTagsHandler = (tags) => {
         setAllClickedTags((prevTags) => {
-            return [...prevTags, ...tags];
+            let newTags = prevTags;
+            for (let i = 0; i < tags.length; i++) {
+                if (!prevTags.includes(tags[i])) {
+                    newTags = [...prevTags, tags[i]];
+                }
+            }
+            return newTags;
         });
+
+        console.log(allClickedTags);
     };
 
     return (

@@ -19,7 +19,8 @@ const TagCardDiv = styled.div`
 `;
 
 const TagCard = (props) => {
-    const clickTagHandler = () => {
+    const clickTagHandler = (e) => {
+        console.log(props.children);
         const tag = props.children;
         props.addTag(tag);
     };
