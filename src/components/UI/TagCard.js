@@ -19,7 +19,12 @@ const TagCardDiv = styled.div`
 `;
 
 const TagCard = (props) => {
-    return <TagCardDiv>{props.children}</TagCardDiv>;
+    const clickTagHandler = () => {
+        const tag = props.children;
+        props.addTag(tag);
+    };
+
+    return <TagCardDiv onClick={clickTagHandler}>{props.children}</TagCardDiv>;
 };
 
 export default TagCard;

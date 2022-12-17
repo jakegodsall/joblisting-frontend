@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styled from 'styled-components';
 import FilterBar from '../FilterBar/FilterBar';
@@ -11,11 +11,19 @@ const JobListDiv = styled.div`
 `;
 
 const JobList = (props) => {
+    const [allClickedTags, setAllClickedTags] = useState([]);
+
+    const onClickTagsHandler = (tags) => {
+        setAllClickedTags((prevTags) => {
+            return [...prevTags, ...tags];
+        });
+    };
+
     return (
         <JobListDiv>
-            <FilterBar />
+            <FilterBar filterList={allClickedTags} />
             {props.jobs.map((job, idx) => {
-                return <JobItem key={idx} job={job} />;
+                return <JobItem onClickTags={onClickTagsHandler} key={idx} job={job} />;
             })}
         </JobListDiv>
     );

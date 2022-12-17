@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 
 import FilterItem from './FilterItem';
 
-const FilterList = () => {
-    const [filters, setFilters] = useState([]);
-
+const FilterList = (props) => {
     return (
         <React.Fragment>
-            {filters.map((filter, idx) => {
+            {props.filterList.map((filter, idx) => {
                 return <FilterItem key={idx}>{filter}</FilterItem>;
             })}
         </React.Fragment>

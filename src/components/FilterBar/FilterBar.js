@@ -11,7 +11,7 @@ const ClearButton = styled.p`
 const FilterBar = (props) => {
     return (
         <JobCard>
-            <FilterList />
+            <FilterList filterList={props.filterList} />
             <ClearButton>Clear</ClearButton>
         </JobCard>
     );
