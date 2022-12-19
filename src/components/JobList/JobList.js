@@ -13,6 +13,12 @@ const JobListDiv = styled.div`
 const JobList = (props) => {
     const [allClickedTags, setAllClickedTags] = useState([]);
 
+    const onClearAllHandler = (status) => {
+        if (status) {
+            setAllClickedTags([]);
+        }
+    };
+
     const onRemoveHandler = (tag) => {
         setAllClickedTags((prevTags) => {
             if (!prevTags.includes(tag)) {
@@ -41,7 +47,11 @@ const JobList = (props) => {
 
     return (
         <JobListDiv>
-            <FilterBar onRemove={onRemoveHandler} filterList={allClickedTags} />
+            <FilterBar
+                onClearAll={onClearAllHandler}
+                onRemove={onRemoveHandler}
+                filterList={allClickedTags}
+            />
             {props.jobs.map((job, idx) => {
                 return <JobItem onClickTag={onClickTagHandler} key={idx} job={job} />;
             })}

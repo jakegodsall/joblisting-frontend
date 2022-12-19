@@ -6,9 +6,16 @@ import FilterList from './FilterList';
 
 const ClearButton = styled.p`
     margin-left: auto;
+    cursor: pointer;
+    color: hsl(180, 29%, 50%);
+    text-decoration: underline;
 `;
 
 const FilterBar = (props) => {
+    const clearAllHandler = (clear) => {
+        props.onClearAll(true);
+    };
+
     const onRemoveHandler = (tag) => {
         props.onRemove(tag);
     };
@@ -16,7 +23,7 @@ const FilterBar = (props) => {
     return (
         <JobCard>
             <FilterList onRemove={onRemoveHandler} filterList={props.filterList} />
-            <ClearButton>Clear</ClearButton>
+            <ClearButton onClick={clearAllHandler}>Clear</ClearButton>
         </JobCard>
     );
 };
