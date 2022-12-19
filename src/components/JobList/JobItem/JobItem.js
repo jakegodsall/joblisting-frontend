@@ -13,8 +13,9 @@ const CompanyLogo = styled.img`
 const JobItem = (props) => {
     let tags = [...[props.job.role, props.job.level, ...props.job.languages, ...props.job.tools]];
 
-    const onClickTagsHandler = (tags) => {
-        props.onClickTags(tags);
+    const onClickTagHandler = (tag) => {
+        console.log(tag);
+        props.onClickTag(tag);
     };
 
     return (
@@ -30,7 +31,7 @@ const JobItem = (props) => {
                 contract={props.job.contract}
                 location={props.job.location}
             />
-            <JobTagList onClickTags={onClickTagsHandler} tags={tags} />
+            <JobTagList onClickTag={onClickTagHandler} tags={tags} />
         </JobCard>
     );
 };

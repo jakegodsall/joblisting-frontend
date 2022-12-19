@@ -9,42 +9,16 @@ const JobTagListDiv = styled.div`
 `;
 
 const JobTagList = (props) => {
-    const [clickedTags, setClickedTags] = useState('');
-
-    const addTagHandler = (newTag) => {
-        if (clickedTags.length === 0) {
-            setClickedTags([newTag]);
-        } else {
-            setClickedTags((prevTags) => {
-                if (prevTags.includes(newTag)) {
-                    return prevTags;
-                }
-                return [...prevTags, newTag];
-            });
-        }
-
-        // if (clickedTags.length === 0) {
-        //     setClickedTags([newTag]);
-        // }
-
-        // // if (clickedTags.length === 0) {
-        // //     setClickedTags([newTag]);
-        // // } else if (prevTags.indexOf(newTag) >= 0) {
-        // //     setClickedTags((prevTags) => {
-        // //         return [...prevTags, newTag];
-        // //     });
-        // // } else {
-        // //     setClickedTags(prevTags);
-        // // }
-
-        props.onClickTags(clickedTags);
+    const addTagHandler = (e) => {
+        const tag = e.target.innerHTML;
+        props.onClickTag(tag);
     };
 
     return (
         <JobTagListDiv>
             {props.tags.map((tag, idx) => {
                 return (
-                    <TagCard addTag={addTagHandler} key={idx}>
+                    <TagCard onClick={addTagHandler} key={idx}>
                         {tag}
                     </TagCard>
                 );

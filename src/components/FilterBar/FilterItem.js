@@ -1,5 +1,5 @@
 import React from 'react';
-import FilterCard from '../UI/TagCard';
+import FilterCard from '../UI/FilterCard';
 
 const FilterItem = (props) => {
     return <FilterCard>{props.children}</FilterCard>;
