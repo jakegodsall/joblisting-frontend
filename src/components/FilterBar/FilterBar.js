@@ -9,9 +9,13 @@ const ClearButton = styled.p`
 `;
 
 const FilterBar = (props) => {
+    const onRemoveHandler = (tag) => {
+        props.onRemove(tag);
+    };
+
     return (
         <JobCard>
-            <FilterList filterList={props.filterList} />
+            <FilterList onRemove={onRemoveHandler} filterList={props.filterList} />
             <ClearButton>Clear</ClearButton>
         </JobCard>
     );

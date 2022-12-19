@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import FilterItem from './FilterItem';
 
 const FilterList = (props) => {
+    const onRemoveHandler = (tag) => {
+        props.onRemove(tag);
+    };
+
     return (
         <React.Fragment>
             {props.filterList.map((filter, idx) => {
-                return <FilterItem key={idx}>{filter}</FilterItem>;
+                return (
+                    <FilterItem onRemove={onRemoveHandler} key={idx}>
+                        {filter}
+                    </FilterItem>
+                );
             })}
         </React.Fragment>
     );

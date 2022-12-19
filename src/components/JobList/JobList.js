@@ -13,6 +13,22 @@ const JobListDiv = styled.div`
 const JobList = (props) => {
     const [allClickedTags, setAllClickedTags] = useState([]);
 
+    const onRemoveHandler = (tag) => {
+        setAllClickedTags((prevTags) => {
+            if (!prevTags.includes(tag)) {
+                return prevTags;
+            } else {
+                let newTags = [];
+                for (let i = 0; i < prevTags.length; i++) {
+                    if (prevTags[i] !== tag) {
+                        newTags.push(prevTags[i]);
+                    }
+                }
+                return newTags;
+            }
+        });
+    };
+
     const onClickTagHandler = (tag) => {
         setAllClickedTags((prevTags) => {
             let newTags = prevTags;
@@ -21,13 +37,11 @@ const JobList = (props) => {
             }
             return newTags;
         });
-
-        console.log(allClickedTags);
     };
 
     return (
         <JobListDiv>
-            <FilterBar filterList={allClickedTags} />
+            <FilterBar onRemove={onRemoveHandler} filterList={allClickedTags} />
             {props.jobs.map((job, idx) => {
                 return <JobItem onClickTag={onClickTagHandler} key={idx} job={job} />;
             })}
