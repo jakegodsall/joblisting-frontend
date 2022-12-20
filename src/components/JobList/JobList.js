@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
 import FilterBar from '../FilterBar/FilterBar';
@@ -11,11 +11,26 @@ const JobListDiv = styled.div`
 `;
 
 const JobList = (props) => {
+    // const onClearAllHandler = (status) => {
+    //     if (status) {
+    //         props.filters([]);
+    //     }
+    // };
+
+    // const onRemoveHandler = (tag) => {
+
+    // };
+
     const [allClickedTags, setAllClickedTags] = useState([]);
+
+    useEffect(() => {
+        props.filters(allClickedTags);
+    }, [allClickedTags]);
 
     const onClearAllHandler = (status) => {
         if (status) {
             setAllClickedTags([]);
+            props.filters([]);
         }
     };
 
