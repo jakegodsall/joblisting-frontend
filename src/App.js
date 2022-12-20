@@ -170,14 +170,6 @@ const App = () => {
                     return [...prevJobs, job];
                 });
             }
-            // for (let j = 0; j < filters.length; j++) {
-            //     if (tags.includes(filters[j])) {
-            //         setFilteredJobs((prevJobs) => {
-            //             return [...prevJobs, JOBS[i]];
-            //         });
-            //     }
-            // }
-            // break;
         }
     };
 

@@ -31,6 +31,11 @@ const FeaturedStatusIcon = styled.h3`
 const PositionType = styled.h2`
     font-size: 1.3rem;
     margin: 0.5rem 0;
+    cursor: pointer;
+
+    &:hover {
+        color: hsl(180, 29%, 50%);
+    }
 `;
 
 const StatusSection = styled.div`
