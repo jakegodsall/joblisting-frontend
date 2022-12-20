@@ -17,16 +17,10 @@ const TagCard = styled.div`
         color: hsl(180, 52%, 96%);
         background-color: hsl(180, 29%, 50%);
     }
+
+    @media (max-width: 750px) {
+        margin: 0 1rem 0.7rem 0;
+    }
 `;
-
-// const TagCard = (props) => {
-//     const clickTagHandler = (e) => {
-//         console.log(props.children);
-//         const tag = props.children;
-//         props.addTag(tag);
-//     };
-
-//     return <TagCardDiv onClick={clickTagHandler}>{props.children}</TagCardDiv>;
-// };
 
 export default TagCard;

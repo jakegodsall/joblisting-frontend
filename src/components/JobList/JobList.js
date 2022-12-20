@@ -8,19 +8,13 @@ import JobItem from './JobItem/JobItem';
 const JobListDiv = styled.div`
     width: 70%;
     margin-inline: auto;
+
+    @media (max-width: 450px) {
+        width: 90%;
+    }
 `;
 
 const JobList = (props) => {
-    // const onClearAllHandler = (status) => {
-    //     if (status) {
-    //         props.filters([]);
-    //     }
-    // };
-
-    // const onRemoveHandler = (tag) => {
-
-    // };
-
     const [allClickedTags, setAllClickedTags] = useState([]);
 
     useEffect(() => {
