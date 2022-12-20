@@ -47,11 +47,14 @@ const JobList = (props) => {
 
     return (
         <JobListDiv>
-            <FilterBar
-                onClearAll={onClearAllHandler}
-                onRemove={onRemoveHandler}
-                filterList={allClickedTags}
-            />
+            {allClickedTags.length !== 0 && (
+                <FilterBar
+                    onClearAll={onClearAllHandler}
+                    onRemove={onRemoveHandler}
+                    filterList={allClickedTags}
+                />
+            )}
+
             {props.jobs.map((job, idx) => {
                 return <JobItem onClickTag={onClickTagHandler} key={idx} job={job} />;
             })}
