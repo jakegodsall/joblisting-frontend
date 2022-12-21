@@ -20,7 +20,10 @@ const JobItem = (props) => {
 
     return (
         <JobCard>
-            <CompanyLogo src={null} alt='Manage company logo' />
+            <CompanyLogo
+                src={process.env.PUBLIC_URL + 'assets' + props.job.logo}
+                alt='Manage company logo'
+            />
             <JobInformation
                 company={props.job.company}
                 new={props.job.new}

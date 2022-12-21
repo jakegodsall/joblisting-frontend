@@ -173,8 +173,6 @@ const App = () => {
         }
     };
 
-    console.log(filteredJobs);
-
     return (
         <div className='container'>
             <JobList filters={filtersHandler} jobs={filteredJobs} />

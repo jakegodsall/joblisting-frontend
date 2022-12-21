@@ -3,6 +3,13 @@ import styled from 'styled-components';
 import FilterContent from './FilterContent';
 import CloseButton from './CloseButton';
 
+const FilterCardDiv = styled.div`
+    @media (max-width: 400px) {
+        display: flex;
+        align-items: center;
+    }
+`;
+
 const FilterCard = (props) => {
     const onClickHandler = (e) => {
         const tag = e.target.previousElementSibling.innerHTML;
@@ -10,10 +17,10 @@ const FilterCard = (props) => {
     };
 
     return (
-        <React.Fragment>
+        <FilterCardDiv>
             <FilterContent>{props.children}</FilterContent>
             <CloseButton onClick={onClickHandler}>X</CloseButton>
-        </React.Fragment>
+        </FilterCardDiv>
     );
 };
 

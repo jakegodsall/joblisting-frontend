@@ -11,6 +11,12 @@ const ClearButton = styled.p`
     text-decoration: underline;
 `;
 
+const FilterBarCard = styled(JobCard)`
+    display: 'flex';
+    flex-direction: 'row';
+    background-color: 'red';
+`;
+
 const FilterBar = (props) => {
     const clearAllHandler = (clear) => {
         props.onClearAll(true);
@@ -21,10 +27,10 @@ const FilterBar = (props) => {
     };
 
     return (
-        <JobCard>
+        <FilterBarCard>
             <FilterList onRemove={onRemoveHandler} filterList={props.filterList} />
             <ClearButton onClick={clearAllHandler}>Clear</ClearButton>
-        </JobCard>
+        </FilterBarCard>
     );
 };
 
