@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import JobList from './components/JobList/JobList';
 
+import './App.css';
+
 const JOBS = [
     {
         id: 1,

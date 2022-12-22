@@ -6,12 +6,7 @@ import FilterBar from '../FilterBar/FilterBar';
 import JobItem from './JobItem/JobItem';
 
 const JobListDiv = styled.div`
-    width: 70%;
-    margin-inline: auto;
-
-    @media (max-width: 450px) {
-        width: 90%;
-    }
+    width: 100%;
 `;
 
 const JobList = (props) => {

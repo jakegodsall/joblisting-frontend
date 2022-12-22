@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CardDiv = styled.div`
+const JobCard = styled.div`
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -14,11 +14,10 @@ const CardDiv = styled.div`
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        position: relative;
+        margin-bottom: 3rem;
+        padding-top: 2rem;
     }
 `;
-
-const JobCard = (props) => {
-    return <CardDiv>{props.children}</CardDiv>;
-};
 
 export default JobCard;

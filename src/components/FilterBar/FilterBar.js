@@ -13,8 +13,6 @@ const ClearButton = styled.p`
 
 const FilterBarCard = styled(JobCard)`
     display: 'flex';
-    flex-direction: 'row';
-    background-color: 'red';
 `;
 
 const FilterBar = (props) => {

@@ -4,6 +4,9 @@ import FilterContent from './FilterContent';
 import CloseButton from './CloseButton';
 
 const FilterCardDiv = styled.div`
+    display: flex;
+    align-items: center;
+
     @media (max-width: 400px) {
         display: flex;
         align-items: center;

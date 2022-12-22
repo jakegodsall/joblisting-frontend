@@ -1,6 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import FilterItem from './FilterItem';
+
+const FilterListDiv = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+`;
 
 const FilterList = (props) => {
     const onRemoveHandler = (tag) => {
@@ -8,7 +16,7 @@ const FilterList = (props) => {
     };
 
     return (
-        <React.Fragment>
+        <FilterListDiv>
             {props.filterList.map((filter, idx) => {
                 return (
                     <FilterItem onRemove={onRemoveHandler} key={idx}>
@@ -16,7 +24,7 @@ const FilterList = (props) => {
                     </FilterItem>
                 );
             })}
-        </React.Fragment>
+        </FilterListDiv>
     );
 };
 

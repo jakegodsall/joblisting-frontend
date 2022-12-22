@@ -6,8 +6,14 @@ import JobInformation from './JobInformation';
 import JobTagList from './JobTagList';
 
 const CompanyLogo = styled.img`
-    width: 5rem;
+    width: 4.5rem;
     margin-right: 1rem;
+
+    @media (max-width: 750px) {
+        position: absolute;
+        top: -20px;
+        width: 3rem;
+    }
 `;
 
 const JobItem = (props) => {
