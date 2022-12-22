@@ -6,7 +6,7 @@ import FilterBar from '../FilterBar/FilterBar';
 import JobItem from './JobItem/JobItem';
 
 const JobListDiv = styled.div`
-    width: 100%;
+    width: 85%;
 `;
 
 const JobList = (props) => {

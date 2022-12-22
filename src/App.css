@@ -2,12 +2,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
-    width: min(100%, 1200px);
+    margin: 0;
+    width: 100vw;
+}
+
+.background-image {
+    background-image: url('./assets/images/bg-header-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(180, 29%, 50%);
+    width: 100%;
+    height: 7rem;
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 800px) {
-    .container {
-        width: 90%;
+    .background-image {
+        background-image: url('./assets/images/bg-header-mobile.svg');
     }
 }

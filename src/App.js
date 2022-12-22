@@ -177,6 +177,7 @@ const App = () => {
 
     return (
         <div className='container'>
+            <div className='background-image'></div>
             <JobList filters={filtersHandler} jobs={filteredJobs} />
         </div>
     );
