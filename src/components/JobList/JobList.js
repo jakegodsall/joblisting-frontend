@@ -7,6 +7,8 @@ import JobItem from './JobItem/JobItem';
 
 const JobListDiv = styled.div`
     width: 85%;
+    display: flex;
+    flex-direction: column;
 `;
 
 const JobList = (props) => {

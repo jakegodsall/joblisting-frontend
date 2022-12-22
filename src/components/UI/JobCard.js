@@ -9,8 +9,12 @@ const JobCard = styled.div`
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0px 20px 20px -20px hsl(180, 29%, 50%, 0.5);
+    width: 100%;
+    max-width: 1300px;
+    margin-inline: auto;
 
     @media (max-width: 750px) {
+        width: 85%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
