@@ -1,0 +1,4 @@
+[build] 
+base = ""
+puiblish = "build"
+command = "npm run build"
