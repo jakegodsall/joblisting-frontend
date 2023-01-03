@@ -1,4 +1,8 @@
 [build] 
 base = ""
+<<<<<<< HEAD
 publish = "build"
+=======
+publish = "build/"
+>>>>>>> 872dc81 (fixing typo in netlify.toml)
 command = "npm run build"
